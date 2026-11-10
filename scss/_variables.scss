@@ -1,12 +1,26 @@
-//medias
+// Medias
 $tablet: 468px;
-$escritorio:748px;
-
+$escritorio:768px;
 
 // Colores
 
-$fondoTitulo: rgb(228, 226, 226);
+$fondoBody: rgb(228, 226, 226);
+$fondoBoton: #008fd1;
 
 // Tamaños
 
-$padStd: 1rem;
+$anchoMaximo: 1100px;
+
+$padLow: 1rem;
+$padMid: 1.5rem;
+$padHigh: 2rem;
+$padVeryHigh: 4rem;
+$padButton: 1rem 4rem;
+$padTituloCard: 0 $padHigh;
+
+$marginButton: 0 0 1rem 0;
+
+// Tamaño Fonts
+
+$fontMid: 1.5rem;
+$fontLow: 1.2rem;

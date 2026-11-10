@@ -8,30 +8,48 @@
 }
 
 body {
-    max-width: $tablet;
-    margin: 0 auto;
 
+    background-color: $fondoBody;
+    
     main { 
-        width: 100%;
+        max-width: $anchoMaximo;
+        margin: 0 auto;
 
         #titulo {
-            justify-self: center;
-            padding: $padStd;
-            background-color: $fondoTitulo;
+            text-align: center;
+            padding: $padLow;
         }
 
         #general {
             display: flex;
             flex-direction: column;
+
+            @include dispositivo($tablet) {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            @include dispositivo($escritorio) {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
             .caja {
-                display: flex;
-                width: 100%;
-                flex-direction: column;
-                align-items: center;
-                
-                img {
-                    width: 100%;
+
+                @include dispositivo($tablet) {
+                    flex-basis: calc(100%/2 - 1rem/2);
                 }
+
+                @include dispositivo($escritorio){
+                    flex-basis: calc(100%/3 - 2rem/3);
+                }
+
+                @include card($padHigh, $padLow);
+
+                @include button($fondoBoton, $padButton, $marginButton, white);
+
             }
         }
         
